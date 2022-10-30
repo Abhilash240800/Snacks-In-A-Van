@@ -1,0 +1,20 @@
+/* 11 */
+@import "vendorOrderLists.css";
+html{
+    width: 1194px;
+    height: 834px;
+}
+
+/* Navigation bar's style */
+.navigations{
+    width: 96.6%;
+    border-radius: 30px;
+    height: 60px;
+    font-family: FuturaBold;
+    list-style-type: none;
+    color: black;
+    margin: 0;
+    overflow: hidden;
+    background-color: #af8baf;
+}
+

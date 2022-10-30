@@ -1,0 +1,73 @@
+<div class="main">
+    <div class="shopCar">
+        <div class="header">
+            <!--            X-->
+            <a href="#" onclick="history.go(-1); return false;" class="x fa fa-2x fa-close"></a>
+            <div class="nav_shop">
+                <div class="nav_title_conter">DETAILS</div>
+
+            </div>
+
+        </div>
+        <div class="h_k_b"></div>
+
+        <!-- detail body -->
+        <div class="conter">
+            <h2 style="color: #83DF6A;text-align: center;margin-top: -20px;">COMPLETED</h2>
+            <table style="border-collapse: separate;border-spacing: 13px;;margin-left:auto;margin-right:auto">
+                <tr style="font-size: 18px;">
+                    <th>VAN NAME</th>
+                    <td>{{van_title}}</td>
+                </tr>
+                <tr style="font-size: 18px;">
+                    <th>ORDER ID</th>
+                    <td>{{partial_id}}</td>
+                </tr>
+                <tr style="font-size: 18px;">
+                    <th>DATE</th>
+                    <td>{{start_date}}</td>
+                </tr>
+                <tr style="font-size: 17px;">
+                    <th>START TIME</th>
+                    <td>{{start_clock}}</td>
+                </tr>
+                <tr style="font-size: 17px;">
+                    <th>END TIME</th>
+                    <td>{{end_clock}}</td>
+                </tr>
+            </table>
+
+            <div>
+                <table class="table table-borderless" style="margin-left:auto;margin-right:auto;">
+
+                    {{#each line_items}}
+                        <tr style="font-size: 22px;">
+                            <td>{{this.snack_name}}</td>
+                            <td>x {{this.number}}</td>
+
+                        </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+        <div class="k_b"></div>
+
+
+
+
+        <div class="foot">
+            <div class="foot_left_price">
+                <p>COST $ {{cost}}</p> <br>
+                <p>REFUND -$ {{refund}}</p>
+
+            </div>
+            <div class="price_all foot_right">
+                TOTAL $ {{total_price}}
+            </div>
+        </div>
+    </div>
+    <div class="left_nav">
+        <img src="./images/drink.png" alt="">
+        <sapn>Snacks&nbsp;in&nbsp;a&nbsp;Van</sapn>
+    </div>
+</div>

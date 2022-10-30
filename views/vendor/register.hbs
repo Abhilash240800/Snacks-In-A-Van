@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles/pro12SignIn&Up.css" media="screen and (min-width:1366px)">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/bootstrapValidator.min.js"></script>
+</head>
+
+<body style="width: 100%; height: 100%">
+
+<div class="leftPart">
+
+    <!-- Page logo and title START -->
+    <div class="van"
+         align="center"
+         style="margin: 0 auto">
+        <img src="./images/van.png">
+    </div>
+
+    <div class="pageTitlePart"
+         align="center">
+        <div class="pageTitle">
+           Create a new account
+        </div>
+    </div>
+    <!-- Page logo and title END -->
+
+    <!-- Form START -->
+    <form id="register_form" action="/vendor/register" method="post" style="width: 80%;
+                height:60%;
+                margin:0 auto;
+                padding-top: 30px"
+                align="center">
+        <div>
+            <p class="formTitle" align="left">
+                Van's name:
+            </p>
+            <div class="form-group">
+            <input name="van_name" class="regisFormInput" data-bv-field="van_name">
+            </div>
+        </div>
+
+        <div>
+            <p class="formTitle" align="left">
+                Set a password:
+            </p>
+            <div class="form-group">
+            <input name="password" type="password" class="regisFormInput" data-bv-field="password">
+            </div>
+        </div>
+
+        <div>
+            <p class="formTitle" align="left">
+                Repeat your password:
+            </p>
+            <div class="form-group">
+            <input name="password2" type="password" class="regisFormInput" data-bv-field="password">
+            </div>
+        </div>
+
+       
+        
+
+        <!-- Register button START -->
+        <div class="btnPart"
+             align="center">
+            <button class="btn" type="submit">
+                Register
+            </button>
+        </div>
+        <!-- Register button END -->
+
+        
+    </form>
+    <!-- Form END -->
+
+</div>
+<!-- Left part form END -->
+
+<!-- Right part img START -->
+<div class="rightPart">
+    <img src="./images/coffee25.jpeg">
+</div>
+<!-- Right part form END -->
+
+<script>
+    // FORM VALIDATION
+    // =================================================================
+    $(function () {
+        $('#register_form').bootstrapValidator({
+            message: 'This value is not valid',
+            fields: {
+                van_name: {
+                    validators: {
+                        stringLength: {
+                            min: 3,
+                            max: 12,
+                            message: 'The strength of van name should not between 3 and 12'
+                        },
+
+                        regexp: {
+                            regexp: /^[0-9a-zA-Z_]{1,}$/,
+                            message: 'Only letters, numbers and dashes'
+                        },
+
+                        notEmpty: {
+                            message: 'Van name is required'
+                        },
+                    }
+                },
+                password1: {
+                    validators: {
+                        stringLength: {
+                            min: 8,
+                            max: 20,
+                            message: 'Password length should be 8~20'
+                        },
+                        regexp : {
+                            regexp : /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/,
+                            message : 'The password must consist of letters and numbers.'
+                        },
+                        notEmpty: {
+                            message: 'The password is required'
+                        }
+                    }
+                },
+                password2: {
+                    validators: {
+                        stringLength: {
+                            min: 8,
+                            max: 20,
+                            message: 'Password length should be 8~20'
+                        },
+                        identical: {
+                            field: 'password1',
+                            message: 'The password and its confirm are not the same'
+                        },
+                        regexp : {
+                            regexp : /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/,
+                            message : 'The password must consist of letters and numbers.'
+                        },
+                        notEmpty: {
+                            message: 'The password is required'
+                        }
+                    }
+                }
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>

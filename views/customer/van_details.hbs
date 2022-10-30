@@ -1,0 +1,63 @@
+<div class="main">
+    <div class="shopCar">
+        <div class="header">
+            <!-- back button -->
+            <a href="#" onclick="history.go(-1); return false;" class="x fa fa-2x fa-close"></a>
+            <div class="nav_shop">
+                <div class="nav_title_conter">Van Details</div>
+
+            </div>
+
+        </div>
+        <div style="height: 12rem;"></div>
+
+        <!-- detail body -->
+        <div style="text-align: center;color:black">
+            <div class="h2" style="margin-top: 1px;font-weight: bold;">{{van_title}}</div>
+        </div>
+        <div style="text-align: center;color:black">
+            <span class="nav_title fa fa-map-marker"></span>
+            <span class="h4">{{distance}}km Away</span>
+            <div class="h5" style="margin-top: 1px;font-weight: bold;">{{text_address}}</div>
+        </div>
+        <div class="rating-container rating-xs" style="justify-content: center !important;display: flex; ">
+            <div class="rating-stars"><span class="empty-stars"><span class="star"><i
+                    class="fa fa-star-o"></i></span><span class="star"><i
+                    class="fa fa-star-o"></i></span><span class="star"><i
+                    class="fa fa-star-o"></i></span><span class="star"><i
+                    class="fa fa-star-o"></i></span><span class="star"><i
+                    class="fa fa-star-o"></i></span></span><span class="filled-stars"
+                                                                 style="width: {{stars_percentage}}%;"><span
+                    class="star"><i class="fa fa-star"></i></span><span class="star"><i
+                    class="fa fa-star"></i></span><span class="star"><i
+                    class="fa fa-star"></i></span><span class="star"><i
+                    class="fa fa-star"></i></span><span class="star"><i
+                    class="fa fa-star"></i></span></span><input id="input-21e" value="0" type="text"
+                                                                class="rating rating-input"
+                                                                data-min="0" data-max="5"
+                                                                data-step="0.5" data-size="xs"
+                                                                title=""></div>
+        </div>
+        <div class="conter">
+            <div>
+                <img class="img-rounded" src="{{picture_path}}" style="width:100%; height:auto; text-align: center; margin-top: 25px;"
+                     alt="van picture">
+            </div>
+        </div>
+        <div class="k_b"></div>
+
+        <div class="foot" style="height: 95px">
+            <div class="row foot_button_group">
+                <div class="col-xs-6">
+                    <a href="/menu/{{{van_name}}}" class="btn btn-primary my-round-border" style="padding: 8px 58px; font-size: 18px">Menu</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="left_nav">
+        <img src="./images/drink.png" alt="">
+        <sapn>Snacks&nbsp;in&nbsp;a&nbsp;Van</sapn>
+    </div>
+</div>
